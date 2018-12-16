@@ -11,6 +11,12 @@ export class LoginComponent {
     password = new FormControl();
 
     loginSubmit() {
-
+      console.log('entered');
+    }
+    get_username_error(){
+      return this.username.hasError('required')?'username is required':'';
+    }
+    get_password_error(){
+      return this.password.hasError('required')?'password is required':'';
     }
 }
